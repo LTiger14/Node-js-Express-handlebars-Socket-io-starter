@@ -3,8 +3,12 @@
   width: 100px;
   height: 100px; }
 
+canvas {
+  display: block;
+  margin: auto;
+  border: 5px solid #808080; }
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {

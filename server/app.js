@@ -33,8 +33,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('node-sass-middleware')({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
+  src: path.join(__dirname, '../public'),
+  dest: path.join(__dirname, '../public'),
   indentedSyntax: false,
   sourceMap: true
 }));
@@ -60,8 +60,7 @@ io.on('connection', (socket) => {
 
   // Square press
   socket.on('square press', (msg) => {
-    gameEngine.pressSquare(msg);
-    socket.emit('update', {mytext: 'hey'});
+    socket.emit('update', gameEngine.pressSquare(msg));
   });
 
   socket.on('disconnect', () => {

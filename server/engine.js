@@ -2,7 +2,7 @@
 
 class Engine {
     pressSquare(action) {
-        console.log(action);
+        return {valid: true, h: 200, w: 200, x: 100, y: 100};
     }
 }
 
